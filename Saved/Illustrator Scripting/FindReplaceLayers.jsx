@@ -1,11 +1,11 @@
 #target illustrator
 var doc = app.activeDocument;
 
-jsfind = prompt("Find: ", "");
-jsreplace = prompt("Replace: ", "");
+jsfind = prompt("Find: "Artboard 1 copy "");
+jsreplace = prompt("Replace: "Artboard "");
 
-for ( var i=0; i<doc.layers.length ;i++) {
-var aBoard = doc.layers[i].active;
-var oldName = doc.layers[i].name;
-doc.layers[i].name = oldName.replace (jsfind, jsreplace);
+for ( var i=0; i<doc.artboards.length ;i++) {
+var aBoard = doc.artboards[i].active;
+var oldName = doc.artboards[i].name;
+doc.artboards[i].name = oldName.replace (jsfind, jsreplace);
 }
